@@ -33,7 +33,7 @@ public class AppsListActivity extends Activity{
     private List<AppDetail> apps;
     private void loadApps(){
         manager = getPackageManager();
-        apps = new ArrayList<AppDetail>();
+        apps = new ArrayList();
 
         Intent i = new Intent(Intent.ACTION_MAIN, null);
         i.addCategory(Intent.CATEGORY_LAUNCHER);
