@@ -2,4 +2,8 @@
     <string name="app_name">SimplePhone</string>
 
     <string name="title_activity_character_select">CharacterSelect</string>
+
+    <!-- Configuration Screens -->
+    <string name="title_choose_character">Elige un amigo</string>
+    <!-- Configuration Screens End -->
 </resources>
