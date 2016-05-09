@@ -5,5 +5,7 @@
 
     <!-- Configuration Screens -->
     <string name="title_choose_character">Elige un amigo</string>
+    <string name="character_name_luis">Luis</string>
+    <string name="character_name_ana">Ana</string>
     <!-- Configuration Screens End -->
 </resources>

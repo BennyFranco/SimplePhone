@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -44,4 +45,34 @@
         android:src="@drawable/ana"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/btnLuis"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:padding="10dp"
+        fancy:fb_defaultColor="@color/selectCharacterButton"
+        fancy:fb_focusColor="#9bd823"
+        fancy:fb_radius="150dp"
+        fancy:fb_textFont=".bold"
+        fancy:fb_textSize="55sp"
+        fancy:fb_text="@string/character_name_luis"
+        fancy:fb_textColor="#FFFFFF"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/btnAna"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:padding="10dp"
+        fancy:fb_defaultColor="@color/selectCharacterButton"
+        fancy:fb_focusColor="#9bd823"
+        fancy:fb_radius="150dp"
+        fancy:fb_textFont=".bold"
+        fancy:fb_textSize="55sp"
+        fancy:fb_text="@string/character_name_ana"
+        fancy:fb_textColor="#FFFFFF"
+        android:layout_alignTop="@+id/btnLuis"
+        android:layout_alignEnd="@+id/imageView3" />
 </RelativeLayout>
