@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SimplePhone</string>
+
+    <string name="title_activity_character_select">CharacterSelect</string>
 </resources>

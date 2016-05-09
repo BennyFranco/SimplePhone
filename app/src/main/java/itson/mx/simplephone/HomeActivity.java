@@ -14,10 +14,6 @@ import android.widget.Button;
 
 public class HomeActivity extends Activity{
 
-    private Button btnLlamar;
-    private Button btnMensaje;
-    private Button btnFotos;
-    private Button btnCamara;
     private PackageManager manager;
 
     @Override
@@ -26,12 +22,12 @@ public class HomeActivity extends Activity{
         setContentView(R.layout.activity_home);
         manager = getPackageManager();
 
-        this.btnLlamar = (Button) findViewById(R.id.btnLlamar);
-        this.btnMensaje = (Button) findViewById(R.id.btnMensaje);
-        this.btnFotos = (Button) findViewById(R.id.btnFotos);
-        this.btnCamara = (Button) findViewById(R.id.btnFoto);
+        Button btnLlamar = (Button) findViewById(R.id.btnLlamar);
+        Button btnMensaje = (Button) findViewById(R.id.btnMensaje);
+        Button btnFotos = (Button) findViewById(R.id.btnFotos);
+        Button btnCamara = (Button) findViewById(R.id.btnFoto);
 
-        this.btnLlamar.setOnClickListener(new View.OnClickListener() {
+        btnLlamar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = manager.getLaunchIntentForPackage("com.android.contacts");
@@ -39,7 +35,7 @@ public class HomeActivity extends Activity{
             }
         });
 
-        this.btnMensaje.setOnClickListener(new View.OnClickListener() {
+        btnMensaje.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = manager.getLaunchIntentForPackage("com.android.mms");
@@ -47,7 +43,7 @@ public class HomeActivity extends Activity{
             }
         });
 
-        this.btnFotos.setOnClickListener(new View.OnClickListener() {
+        btnFotos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = manager.getLaunchIntentForPackage("com.sec.android.gallery3d");
@@ -55,7 +51,7 @@ public class HomeActivity extends Activity{
             }
         });
 
-        this.btnCamara.setOnClickListener(new View.OnClickListener() {
+        btnCamara.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = manager.getLaunchIntentForPackage("com.sec.android.app.camera");
