@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -25,7 +26,8 @@ public class MainActivity extends Activity {
     private Camera mCamera;
     private CameraPreview mPreview;
     private PictureCallback mPicture;
-    private Button capture, switchCamera;
+    private ImageButton capture;
+    private Button switchCamera;
     private Context myContext;
     private LinearLayout cameraPreview;
     private boolean cameraFront = false;
@@ -97,7 +99,7 @@ public class MainActivity extends Activity {
         mPreview = new CameraPreview(myContext, mCamera);
         cameraPreview.addView(mPreview);
 
-        capture = (Button) findViewById(R.id.button_capture);
+        capture = (ImageButton) findViewById(R.id.button_capture);
         capture.setOnClickListener(captrureListener);
 
         switchCamera = (Button) findViewById(R.id.button_ChangeCamera);
