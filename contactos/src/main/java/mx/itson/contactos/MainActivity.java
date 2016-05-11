@@ -33,46 +33,26 @@ public class MainActivity extends Activity {
         String Phone_CONTACT_ID = ContactsContract.CommonDataKinds.Phone.CONTACT_ID;
         String NUMBER = ContactsContract.CommonDataKinds.Phone.NUMBER;
 
-        Uri EmailCONTENT_URI = ContactsContract.CommonDataKinds.Email.CONTENT_URI;
-        String EmailCONTACT_ID = ContactsContract.CommonDataKinds.Email.CONTACT_ID;
-        String DATA = ContactsContract.CommonDataKinds.Email.DATA;
-
-        StringBuffer output = new StringBuffer();
-
         ContentResolver contentResolver = getContentResolver();
-
         Cursor cursor = contentResolver.query(CONTENT_URI, null, null, null, null);
 
         lvPhone = (ListView) findViewById(R.id.listPhone);
 
         List<PhoneBook> listPhoneBook = new ArrayList<PhoneBook>();
-        /*listPhoneBook.add(new PhoneBook(
-                BitmapFactory.decodeResource(getResources(), R.drawable.no_photo),
-                "Hijo", "010-9817-6331", "pete.houston.17187@gmail.com"));
-        listPhoneBook.add(new PhoneBook(
-                BitmapFactory.decodeResource(getResources(), R.drawable.no_photo),
-                "Hija", "046-7764-1142", "lina.cheng011@sunny.com"));
-        listPhoneBook.add(new PhoneBook(
-                BitmapFactory.decodeResource(getResources(), R.drawable.no_photo),
-                "Carmen", "0913-223-498", "jenny_in_love98@yahoo.com"));*/
-
-        // Loop for every contact in the phone
         if (cursor.getCount() > 0) {
             while (cursor.moveToNext()) {
                 String contact_id = cursor.getString(cursor.getColumnIndex(_ID));
                 String name = cursor.getString(cursor.getColumnIndex(DISPLAY_NAME));
                 int hasPhoneNumber = Integer.parseInt(cursor.getString(cursor.getColumnIndex(HAS_PHONE_NUMBER)));
                 if (hasPhoneNumber > 0) {
-                    // Query and loop for every phone number of the contact
-                    /*Cursor phoneCursor = contentResolver.query(PhoneCONTENT_URI, null, Phone_CONTACT_ID + " = ?", new String[]{contact_id}, null);
+                    Cursor phoneCursor = contentResolver.query(PhoneCONTENT_URI, null, Phone_CONTACT_ID + " = ?", new String[]{contact_id}, null);
                     while (phoneCursor.moveToNext()) {
                         phoneNumber = phoneCursor.getString(phoneCursor.getColumnIndex(NUMBER));
-                        output.append("\n Phone number:" + phoneNumber);
                     }
-                    phoneCursor.close();*/
+                    phoneCursor.close();
                     listPhoneBook.add(new PhoneBook(
                             BitmapFactory.decodeResource(getResources(), R.drawable.no_photo),
-                            name, "010-9817-6331", "pete.houston.17187@gmail.com"));
+                            name, phoneNumber, ""));
                 }
             }
         }

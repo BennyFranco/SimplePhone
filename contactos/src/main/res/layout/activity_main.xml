@@ -13,8 +13,11 @@
         <ListView
             android:id="@+id/listPhone"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="fill_parent"
 
-            />
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp" />
     </LinearLayout>
 </LinearLayout>

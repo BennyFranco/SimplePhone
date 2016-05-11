@@ -57,14 +57,6 @@ public class PhoneBookAdapter extends BaseAdapter {
         TextView tvName = (TextView)convertView.findViewById(R.id.tvName);
         tvName.setText(entry.getName());
 
-        /*// set phone
-        TextView tvPhone = (TextView)convertView.findViewById(R.id.tvPhone);
-        tvPhone.setText(entry.getPhone());
-
-        // set email
-        TextView tvEmail = (TextView)convertView.findViewById(R.id.tvEmail);
-        tvEmail.setText(entry.getEmail());*/
-
         return convertView;
     }
 
