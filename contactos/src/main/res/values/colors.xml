@@ -3,4 +3,11 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!-- Simple Phone Colors! -->
+    <color name="white">#ffffff</color>
+    <color name="defaultBackgroundColor">#F2A017</color>
+    <color name="selectCharacterButton">#dd6b20</color>
+    <color name="selectTextColor">#EB9022</color>
+    <color name="luisTitlesColor">#0084c9</color>
 </resources>
