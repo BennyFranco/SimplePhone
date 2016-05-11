@@ -8,4 +8,8 @@
     <string name="character_name_luis">Luis</string>
     <string name="character_name_ana">Ana</string>
     <!-- Configuration Screens End -->
+
+    <!-- Home Screen -->
+    <string name="title_accion">¿Qué deseas hacer hoy?</string>
+    <!-- Home Screen End -->
 </resources>
