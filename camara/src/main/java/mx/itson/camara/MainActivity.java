@@ -212,7 +212,7 @@ public class MainActivity extends Activity {
     //make picture and save to a folder
     private static File getOutputMediaFile() {
         //make a new file directory inside the "sdcard" folder
-        File mediaStorageDir = new File("/sdcard/", "JCG Camera");
+        File mediaStorageDir = new File("/sdcard/", "SimplePhone");
 
         //if this "JCGCamera folder does not exist
         if (!mediaStorageDir.exists()) {
