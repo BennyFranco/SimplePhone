@@ -1,1 +1,1 @@
-include ':app', ':contactos'
+include ':app', ':contactos', ':camara'
