@@ -1,7 +1,5 @@
 package mx.itson.contactos;
 
-import java.util.List;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.List;
 
 /**
  * Created by Benny on 11/05/16.
@@ -57,13 +57,13 @@ public class PhoneBookAdapter extends BaseAdapter {
         TextView tvName = (TextView)convertView.findViewById(R.id.tvName);
         tvName.setText(entry.getName());
 
-        // set phone
+        /*// set phone
         TextView tvPhone = (TextView)convertView.findViewById(R.id.tvPhone);
         tvPhone.setText(entry.getPhone());
 
         // set email
         TextView tvEmail = (TextView)convertView.findViewById(R.id.tvEmail);
-        tvEmail.setText(entry.getEmail());
+        tvEmail.setText(entry.getEmail());*/
 
         return convertView;
     }
