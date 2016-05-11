@@ -38,7 +38,7 @@ public class HomeActivity extends Activity{
                     case HOME:
                         accion.setText(tituloAcciones[0]);
                         accionSeleccionada = acciones.MENSAJE;
-                        botonSi.setVisibility(view.VISIBLE);
+                        botonSi.setVisibility(View.VISIBLE);
                         break;
                     case MENSAJE:
                         accion.setText(tituloAcciones[1]);
@@ -55,7 +55,7 @@ public class HomeActivity extends Activity{
                     case FOTOS:
                         accion.setText(tituloAcciones[4]);
                         accionSeleccionada = acciones.HOME;
-                        botonSi.setVisibility(view.INVISIBLE);
+                        botonSi.setVisibility(View.INVISIBLE);
                         break;
                 }
             }
@@ -71,7 +71,7 @@ public class HomeActivity extends Activity{
                         startActivity(i);
                         break;
                     case LLAMAR:
-                        i = manager.getLaunchIntentForPackage("com.android.contacts");
+                        i = manager.getLaunchIntentForPackage("mx.itson.contactos");
                         startActivity(i);
                         break;
                     case CAMARA:
