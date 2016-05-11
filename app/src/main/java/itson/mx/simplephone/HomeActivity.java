@@ -75,7 +75,7 @@ public class HomeActivity extends Activity{
                         startActivity(i);
                         break;
                     case CAMARA:
-                        i = manager.getLaunchIntentForPackage("com.sec.android.app.camera");
+                        i = manager.getLaunchIntentForPackage("mx.itson.camara");
                         startActivity(i);
                         break;
                     case FOTOS:

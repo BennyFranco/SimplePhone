@@ -30,6 +30,7 @@ public class MainActivity extends Activity {
     private Button switchCamera;
     private Context myContext;
     private LinearLayout cameraPreview;
+    private Camera.Parameters parameters;
     private boolean cameraFront = false;
 
     @Override
@@ -88,7 +89,11 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "No front facing camera found.", Toast.LENGTH_LONG).show();
                 switchCamera.setVisibility(View.GONE);
             }
+
             mCamera = Camera.open(findBackFacingCamera());
+            parameters = mCamera.getParameters();
+            parameters.set("orientation", "portrait");
+            mCamera.setParameters(parameters);
             mPicture = getPictureCallback();
             mPreview.refreshCamera(mCamera);
         }
