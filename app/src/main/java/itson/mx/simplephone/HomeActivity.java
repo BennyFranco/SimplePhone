@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 /**
@@ -65,30 +64,23 @@ public class HomeActivity extends Activity{
         botonSi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent i;
                 switch (accionSeleccionada){
                     case MENSAJE:
-                        Toast toast1 = Toast.makeText(getApplicationContext(),
-                                tituloAcciones[0], Toast.LENGTH_SHORT);
-
-                        toast1.show();
+                        i = manager.getLaunchIntentForPackage("com.android.mms");
+                        startActivity(i);
                         break;
                     case LLAMAR:
-                        toast1 = Toast.makeText(getApplicationContext(),
-                                tituloAcciones[1], Toast.LENGTH_SHORT);
-
-                        toast1.show();
+                        i = manager.getLaunchIntentForPackage("com.android.contacts");
+                        startActivity(i);
                         break;
                     case CAMARA:
-                        toast1 = Toast.makeText(getApplicationContext(),
-                                tituloAcciones[2], Toast.LENGTH_SHORT);
-
-                        toast1.show();
+                        i = manager.getLaunchIntentForPackage("com.sec.android.app.camera");
+                        startActivity(i);
                         break;
                     case FOTOS:
-                        toast1 = Toast.makeText(getApplicationContext(),
-                                tituloAcciones[3], Toast.LENGTH_SHORT);
-
-                        toast1.show();
+                        i = manager.getLaunchIntentForPackage("com.sec.android.gallery3d");
+                        startActivity(i);
                         break;
                 }
             }
